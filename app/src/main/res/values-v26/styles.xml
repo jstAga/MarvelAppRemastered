@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_marginHorizontal">@dimen/base_horizontal_margin</item>
+        <item name="backgroundTint">@color/dark_gray</item>
+        <item name="strokeColor">@color/light_gray</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="strokeWidth">@dimen/stroke</item>
+    </style>
+<!--    <item name=""></item>-->
+
+</resources>
