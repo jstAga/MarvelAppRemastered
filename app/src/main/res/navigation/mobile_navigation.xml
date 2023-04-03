@@ -3,66 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashScreenFragment">
 
+    <fragment
+        android:id="@+id/signFlowFragment"
+        android:name="com.example.marvelappremastered.SignFlowFragment"
+        android:label="fragment_sign_flow"
+        tools:layout="@layout/fragment_on_boarding" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFlowFragment"
+        android:name="com.example.marvelappremastered.MainFlowFragment"
+        android:label="fragment_main_flow"
+        tools:layout="@layout/fragment_main_flow" />
     <fragment
         android:id="@+id/splashScreenFragment"
         android:name="com.example.marvelappremastered.ui.fragments.splashScreen.SplashScreenFragment"
-        android:label="fragment_splash_screen"
+        android:label="SplashScreenFragment"
         tools:layout="@layout/fragment_splash_screen">
         <action
-            android:id="@+id/action_splashScreenFragment_to_onBoardingFragment"
-            app:destination="@id/onBoardingFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/onBoardingFragment"
-        android:name="com.example.marvelappremastered.ui.fragments.onBoarding.OnBoardingFragment"
-        android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding">
+            android:id="@+id/action_splashScreenFragment_to_signFlowFragment"
+            app:destination="@id/signFlowFragment" />
         <action
-            android:id="@+id/action_onBoardingFragment_to_authFragment"
-            app:destination="@id/authFragment" />
+            android:id="@+id/action_splashScreenFragment_to_mainFlowFragment"
+            app:destination="@id/mainFlowFragment"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true"/>
     </fragment>
-    <fragment
-        android:id="@+id/authFragment"
-        android:name="com.example.marvelappremastered."
-        android:label="fragment_auth"
-        tools:layout="@layout/fragment_auth">
-        <action
-            android:id="@+id/action_authFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.marvelappremastered.ui.fragments.home.HomeFragment"
-        android:label="fragment_home2"
-        tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_filmDetailFragment"
-            app:destination="@id/filmDetailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/filmDetailFragment"
-        android:name="com.example.marvelappremastered.ui.fragments.filmDetail.FilmDetailFragment"
-        android:label="fragment_film_detail"
-        tools:layout="@layout/fragment_film_detail" />
-    <fragment
-        android:id="@+id/shopFragment"
-        android:name="com.example.marvelappremastered.ui.fragments.shop.ShopFragment"
-        android:label="fragment_shop"
-        tools:layout="@layout/fragment_shop">
-        <action
-            android:id="@+id/action_shopFragment_to_creditCardFragment"
-            app:destination="@id/creditCardFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/creditCardFragment"
-        android:name="com.example.marvelappremastered.ui.fragments.creditCard.CreditCardFragment"
-        android:label="fragment_credit_card"
-        tools:layout="@layout/fragment_credit_card" />
-    <fragment
-        android:id="@+id/comicsFragment"
-        android:name="com.example.marvelappremastered.ui.fragments.comics.ComicsFragment"
-        android:label="fragment_comics"
-        tools:layout="@layout/fragment_comics" />
+
 </navigation>
