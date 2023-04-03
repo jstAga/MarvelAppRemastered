@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="ivLogo" />
+
+    <item type="id" name="rvPoster" />
+    <item type="id" name="rvFeed" />
+    <item type="id" name="btnNews" />
+
+    <item type="id" name="rvComics" />
+    <item type="id" name="tvTitle" />
+    <item type="id" name="ivImage" />
+    <item type="id" name="ivFavorite" />
+
+    <item type="id" name="rvShop" />
+    <item type="id" name="tvPrice" />
+    <item type="id" name="tvCount" />
+    <item type="id" name="btnBuy" />
+</resources>
