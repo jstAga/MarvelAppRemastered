@@ -1,4 +1,4 @@
-package com.example.marvelappremastered.ui.fragments.home
+package com.example.marvelappremastered.ui.fragments.main.home
 
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.marvelappremastered.R

@@ -1,4 +1,4 @@
-package com.example.marvelappremastered.ui.fragments.onBoarding
+package com.example.marvelappremastered.ui.fragments.main.onBoarding
 
 import com.example.rm.presentation.core.base.BaseViewModel
 

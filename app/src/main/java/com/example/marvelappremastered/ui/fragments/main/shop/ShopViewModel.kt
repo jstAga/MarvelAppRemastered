@@ -1,4 +1,4 @@
-package com.example.marvelappremastered.ui.fragments.shop
+package com.example.marvelappremastered.ui.fragments.main.shop
 
 import com.example.rm.presentation.core.base.BaseViewModel
 

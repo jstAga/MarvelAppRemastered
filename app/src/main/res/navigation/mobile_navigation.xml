@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/signFlowFragment"
-        android:name="com.example.marvelappremastered.SignFlowFragment"
+        android:name="com.example.marvelappremastered.ui.fragments.sign.SignFlowFragment"
         android:label="fragment_sign_flow"
         tools:layout="@layout/fragment_on_boarding" >
     </fragment>
 
     <fragment
         android:id="@+id/mainFlowFragment"
-        android:name="com.example.marvelappremastered.MainFlowFragment"
+        android:name="com.example.marvelappremastered.ui.fragments.main.MainFlowFragment"
         android:label="fragment_main_flow"
         tools:layout="@layout/fragment_main_flow" />
     <fragment
