@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/medium_margin"
+    android:layout_margin="@dimen/margin40"
     android:background="@color/main_dark_gray"
     android:orientation="horizontal">
 
@@ -22,7 +22,7 @@
             android:id="@id/tvTitle"
             android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginStart="@dimen/margin40"
             android:maxLines="3"
             android:textColor="@color/white"
             android:textSize="@dimen/big_title_size"
@@ -44,7 +44,7 @@
             android:id="@id/tvCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/very_small_margin"
+            android:layout_marginStart="@dimen/margin4"
             android:textColor="@color/red"
             android:textSize="@dimen/title_size"
             app:layout_constraintBottom_toBottomOf="@id/tvPrice"

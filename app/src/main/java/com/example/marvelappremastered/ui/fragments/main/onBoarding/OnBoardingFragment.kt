@@ -1,4 +1,4 @@
-package com.example.marvelappremastered.ui.fragments.onBoarding
+package com.example.marvelappremastered.ui.fragments.main.onBoarding
 
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.marvelappremastered.R

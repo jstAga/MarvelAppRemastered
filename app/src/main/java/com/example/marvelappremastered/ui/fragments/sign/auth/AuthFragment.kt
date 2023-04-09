@@ -1,4 +1,4 @@
-package com.example.marvelappremastered.ui.fragments.auth
+package com.example.marvelappremastered.ui.fragments.sign.auth
 
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.marvelappremastered.R

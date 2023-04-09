@@ -1,4 +1,4 @@
-package com.example.marvelappremastered.ui.fragments.creditCard
+package com.example.marvelappremastered.ui.fragments.main.creditCard
 
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.marvelappremastered.R

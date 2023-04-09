@@ -1,4 +1,4 @@
-package com.example.marvelappremastered
+package com.example.marvelappremastered.ui.fragments.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.marvelappremastered.R
 import com.example.marvelappremastered.databinding.FragmentMainFlowBinding
 import com.example.marvelappremastered.ui.core.base.BaseFlowFragment
 
@@ -50,5 +51,4 @@ class MainFlowFragment : BaseFlowFragment(R.layout.fragment_main_flow, R.id.nav_
             }
         }
     }
-
 }
