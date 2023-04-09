@@ -7,7 +7,7 @@ import com.example.marvelappremastered.ui.core.base.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CreditCardFragment :
-    BaseFragment<FragmentCreditCardBinding, CreditCardViewModel>(R.layout.fragment_auth) {
+    BaseFragment<FragmentCreditCardBinding, CreditCardViewModel>(R.layout.fragment_credit_card) {
 
     override val binding by viewBinding(FragmentCreditCardBinding::bind)
     override val viewModel by viewModel<CreditCardViewModel>()

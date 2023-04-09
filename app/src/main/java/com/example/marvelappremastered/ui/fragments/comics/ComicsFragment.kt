@@ -7,7 +7,7 @@ import com.example.marvelappremastered.ui.core.base.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ComicsFragment :
-    BaseFragment<FragmentComicsBinding, ComicsViewModel>(R.layout.fragment_auth) {
+    BaseFragment<FragmentComicsBinding, ComicsViewModel>(R.layout.fragment_comics) {
 
     override val binding by viewBinding(FragmentComicsBinding::bind)
     override val viewModel by viewModel<ComicsViewModel>()
