@@ -8,12 +8,11 @@
 
     <item
         android:id="@+id/shopFragment"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:icon="@drawable/ic_not_favorite"
+        android:title="@string/shop" />
 
     <item
         android:id="@+id/comicsFragment"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
-
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/comics" />
 </menu>

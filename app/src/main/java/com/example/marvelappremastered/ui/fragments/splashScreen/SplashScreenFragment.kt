@@ -9,11 +9,12 @@ import coil.load
 import com.example.marvelappremastered.R
 import com.example.marvelappremastered.databinding.FragmentSplashScreenBinding
 import com.example.marvelappremastered.ui.core.base.BaseFragment
+import com.example.marvelappremastered.ui.core.navigateSafely
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenFragment :
-    BaseFragment<FragmentSplashScreenBinding, SplashScreenViewModel>(R.layout.fragment_auth) {
+    BaseFragment<FragmentSplashScreenBinding, SplashScreenViewModel>(R.layout.fragment_splash_screen) {
 
     override val binding by viewBinding(FragmentSplashScreenBinding::bind)
     override val viewModel by viewModel<SplashScreenViewModel>()
@@ -30,7 +31,7 @@ class SplashScreenFragment :
     private fun afterSplash() {
         Handler(Looper.getMainLooper()).postDelayed({
             //            if (auth.currentUser?.uid != null) {
-            findNavController().navigate(R.id.homeFragment)
+            findNavController().navigateSafely(R.id.action_splashScreenFragment_to_mainFlowFragment)
             //            } else {
             //                findNavController().navigate(R.id.boardingFragment)
             //            }

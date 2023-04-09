@@ -7,7 +7,7 @@ import com.example.marvelappremastered.ui.core.base.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment :
-    BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.fragment_auth) {
+    BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.fragment_home) {
 
     override val binding by viewBinding(FragmentHomeBinding::bind)
     override val viewModel by viewModel<HomeViewModel>()
