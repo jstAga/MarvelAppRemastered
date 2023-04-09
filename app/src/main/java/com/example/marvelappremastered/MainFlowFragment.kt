@@ -50,4 +50,5 @@ class MainFlowFragment : BaseFlowFragment(R.layout.fragment_main_flow, R.id.nav_
             }
         }
     }
+
 }
