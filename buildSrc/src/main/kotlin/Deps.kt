@@ -16,6 +16,7 @@ object Versions {
     const val koin_version = "2.2.3"
     const val paging = "3.1.1"
     const val retrofit = "2.9.0"
+    const val room = "2.4.3"
 }
 
 object Deps {
@@ -73,6 +74,11 @@ object Deps {
     object Paging3{
         const val common = "androidx.paging:paging-common:${Versions.paging}"
         const val paging = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
+    }
+
+    object Room{
+        const val room = "androidx.room:room-runtime:${Versions.room}"
+        const val compiler = "androidx.room:room-compiler:${Versions.room}"
     }
 }
 
