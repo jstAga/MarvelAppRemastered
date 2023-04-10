@@ -1,6 +1,7 @@
 plugins {
     id(Plugins.AGP.library)
     id(Plugins.Kotlin.kotlin)
+    id(Plugins.Kotlin.kapt)
 }
 
 android {
@@ -50,4 +51,9 @@ dependencies {
 
     //Paging
     api(Deps.Paging3.paging)
+
+    //Room
+    implementation(Deps.Room.room)
+    annotationProcessor(Deps.Room.compiler)
+    kotlin(Deps.Room.compiler)
 }
