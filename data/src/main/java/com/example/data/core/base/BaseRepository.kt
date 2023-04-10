@@ -29,7 +29,7 @@ abstract class BaseRepository {
         }
 
     protected fun <ValueDto : DataMapper<Value>, Value : Any> doPagingRequest(
-        pagingSource: BasePagingSource<ValueDto, Value>,
+        pagingSource: BaseMarvelPagingSource<ValueDto, Value>,
         pageSize: Int = 10,
         prefetchDistance: Int = pageSize,
         enablePlaceholders: Boolean = true,
