@@ -8,3 +8,8 @@ open class BasePagingResponse<T>(
     @SerializedName("results")
     val results: MutableList<T>
 )
+
+open class BaseMarvel<T>(
+    @SerializedName("data")
+    val data : T
+)

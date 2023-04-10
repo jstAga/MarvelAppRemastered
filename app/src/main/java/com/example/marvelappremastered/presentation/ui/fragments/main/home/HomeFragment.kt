@@ -1,0 +1,14 @@
+package com.example.marvelappremastered.presentation.ui.fragments.main.home
+
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.marvelappremastered.R
+import com.example.marvelappremastered.databinding.FragmentHomeBinding
+import com.example.marvelappremastered.presentation.core.base.BaseFragment
+import org.koin.androidx.viewmodel.ext.android.viewModel
+
+class HomeFragment :
+    BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.fragment_home) {
+
+    override val binding by viewBinding(FragmentHomeBinding::bind)
+    override val viewModel by viewModel<HomeViewModel>()
+}

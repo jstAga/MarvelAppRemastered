@@ -1,5 +1,7 @@
 package com.example.data.core
 
+import com.example.data.remote.Constants
+import com.example.data.remote.apiServices.MarvelApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.module.Module
@@ -12,7 +14,7 @@ import java.util.concurrent.TimeUnit
 val networkModules: Module = module {
     factory { provideOkHttpClient() }
     single { provideRetrofit(get()) }
-//    factory { provideApi(get()) }
+    factory { provideApi(get()) }
 }
 
 fun provideOkHttpClient(): OkHttpClient {
@@ -26,12 +28,10 @@ fun provideOkHttpClient(): OkHttpClient {
 
 fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
     return Retrofit.Builder()
-        .baseUrl(BASE_URL)
+        .baseUrl(Constants.BASE_URL_MARVEL)
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
 }
 
-//fun provideApi(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
-
-const val BASE_URL = "https://rickandmortyapi.com/api/"
+fun provideApi(retrofit: Retrofit): MarvelApi = retrofit.create(MarvelApi::class.java)
