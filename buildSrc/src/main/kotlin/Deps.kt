@@ -17,6 +17,7 @@ object Versions {
     const val paging = "3.1.1"
     const val retrofit = "2.9.0"
     const val room = "2.4.3"
+    const val daggerHilt = "2.44"
 }
 
 object Deps {
@@ -76,9 +77,15 @@ object Deps {
         const val paging = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
     }
 
-    object Room{
-        const val room = "androidx.room:room-runtime:${Versions.room}"
+    object Room {
+        const val room = "androidx.room:room-ktx:${Versions.room}"
+        const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
         const val compiler = "androidx.room:room-compiler:${Versions.room}"
+    }
+
+    object DaggerHilt {
+        const val android = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
+        const val compiler = "com.google.dagger:hilt-compiler:${Versions.daggerHilt}"
     }
 }
 
@@ -94,5 +101,9 @@ object Plugins {
         const val kotlin_jvm = "org.jetbrains.kotlin.jvm"
         const val kotlin = "org.jetbrains.kotlin.android"
         const val kapt = "kotlin-kapt"
+    }
+
+    object DaggerHilt {
+        const val android = "com.google.dagger.hilt.android"
     }
 }

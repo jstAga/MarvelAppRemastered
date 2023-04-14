@@ -9,7 +9,7 @@ import com.example.data.core.base.BaseDiffUtilItemCallback
 import com.example.marvelappremastered.databinding.ItemComicBinding
 import com.example.marvelappremastered.presentation.model.ComicUi
 
-class ComicsPagingAdapter :
+class ComicsPagingAdapter(private val onComicClick: (ComicUi) -> Unit) :
     PagingDataAdapter<ComicUi, ComicsPagingAdapter.ViewHolder>(
         BaseDiffUtilItemCallback()
     ) {
@@ -31,6 +31,9 @@ class ComicsPagingAdapter :
             with(binding) {
                 ivImage.load(model.image)
                 tvTitle.text = model.title
+                itemView.setOnClickListener {
+                    onComicClick(model)
+                }
             }
         }
     }

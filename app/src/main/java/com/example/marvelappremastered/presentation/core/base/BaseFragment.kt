@@ -20,7 +20,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(
-    @LayoutRes layoutId: Int
+    @LayoutRes layoutId: Int,
 ) :
     Fragment(layoutId) {
     protected abstract val binding: Binding
@@ -149,7 +149,7 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(
 
     protected fun <T : Any> Flow<PagingData<T>>.collectPaging(
         lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,
-        action: suspend (value: PagingData<T>) -> Unit
+        action: suspend (value: PagingData<T>) -> Unit,
     ) {
         safeFlowGather(lifecycleState) { this.collectLatest { action(it) } }
     }
