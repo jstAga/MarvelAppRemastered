@@ -2,8 +2,8 @@ package com.example.marvelappremastered.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.data.local.room.AppDataBase
-import com.example.data.local.room.ComicsDao
+//import com.example.data.local.room.AppDataBase
+//import com.example.data.local.room.ComicsDao
 import com.example.data.remote.Constants
 import com.example.data.remote.apiServices.MarvelApi
 import com.example.data.repository.ComicsRepositoryImpl
@@ -21,20 +21,20 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class AppModule {
 
-    @Singleton
-    @Provides
-    fun provideAppDatabase(@ApplicationContext context: Context) =
-        Room.databaseBuilder(context, AppDataBase::class.java, "note_db").fallbackToDestructiveMigration()
-            .allowMainThreadQueries().build()
+//    @Singleton
+//    @Provides
+//    fun provideAppDatabase(@ApplicationContext context: Context) =
+//        Room.databaseBuilder(context, AppDataBase::class.java, "comic_db").allowMainThreadQueries().build()
+
+//    @Singleton
+//    @Provides
+//    fun provideComicDao(appDataBase: AppDataBase) = appDataBase.comicDao()
 
     @Singleton
     @Provides
-    fun provideComicDao(appDataBase: AppDataBase) = appDataBase.comicDao()
-
-    @Singleton
-    @Provides
-    fun provideComicsRepository(marvelApi: MarvelApi, comicsDao: ComicsDao): ComicsRepository =
-        ComicsRepositoryImpl(marvelApi, comicsDao)
+    fun provideComicsRepository(marvelApi: MarvelApi): ComicsRepository =
+//        ComicsRepositoryImpl(marvelApi, comicsDao)
+        ComicsRepositoryImpl(marvelApi)
 
     @Provides
     fun marvelApiProvide(): MarvelApi {

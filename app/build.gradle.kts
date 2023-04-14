@@ -69,8 +69,8 @@ dependencies {
 
     // Room
     implementation(Deps.Room.room)
-    implementation(Deps.Room.roomRuntime)
-    implementation(Deps.Room.compiler)
+    annotationProcessor(Deps.Room.compiler)
+//    kapt(Deps.Room.compiler)
 
     // Navigation
     implementation(Deps.Navigation.ui)

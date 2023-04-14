@@ -52,12 +52,12 @@ object Deps {
         const val inject = "javax.inject:javax.inject:1"
     }
 
-    object Koin{
-        const val koin =  "io.insert-koin:koin-android:${Versions.koin_version}"
-        const val scope =  "io.insert-koin:koin-androidx-scope:${Versions.koin_version}"
-        const val viewModel =  "io.insert-koin:koin-androidx-viewmodel:${Versions.koin_version}"
-        const val fragment =  "io.insert-koin:koin-androidx-fragment:${Versions.koin_version}"
-    }
+//    object Koin{
+//        const val koin =  "io.insert-koin:koin-android:${Versions.koin_version}"
+//        const val scope =  "io.insert-koin:koin-androidx-scope:${Versions.koin_version}"
+//        const val viewModel =  "io.insert-koin:koin-androidx-viewmodel:${Versions.koin_version}"
+//        const val fragment =  "io.insert-koin:koin-androidx-fragment:${Versions.koin_version}"
+//    }
 
     object Coil{
         const val coil = "io.coil-kt:coil:2.2.2"

@@ -46,14 +46,13 @@ dependencies {
     // Coroutines
     implementation(Deps.Coroutines.android)
 
-
     // Paging
     api(Deps.Paging3.paging)
 
     // Room
     implementation(Deps.Room.room)
-    implementation(Deps.Room.roomRuntime)
-    implementation(Deps.Room.compiler)
+    annotationProcessor(Deps.Room.compiler)
+//    kapt(Deps.Room.compiler)
 
     // Inject
     implementation(Deps.Javax.inject)

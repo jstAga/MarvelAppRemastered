@@ -11,7 +11,7 @@ interface ComicsRepository {
 
     fun getComics() : Flow<PagingData<ComicModel>>
 
-    fun createComic(comic : Comic) : Flow<Resource<Unit>>
-
-    fun deleteComic(comic : Comic) : Flow<Resource<Unit>>
+//    fun createComic(comic : Comic) : Flow<Resource<Unit>>
+//
+//    fun deleteComic(comic : Comic) : Flow<Resource<Unit>>
 }
