@@ -6,5 +6,5 @@ import javax.inject.Inject
 
 class DeleteComicUseCase @Inject constructor(private val comicsRepository: ComicsRepository) {
 
-    operator fun invoke(comic: Comic) = comicsRepository.deleteComic(comic)
+//    operator fun invoke(comic: Comic) = comicsRepository.deleteComic(comic)
 }

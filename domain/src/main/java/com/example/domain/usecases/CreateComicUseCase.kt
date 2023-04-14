@@ -6,5 +6,5 @@ import javax.inject.Inject
 
 class CreateComicUseCase @Inject constructor(private val comicsRepository: ComicsRepository) {
 
-    operator fun invoke(comic: Comic) = comicsRepository.createComic(comic)
+//    operator fun invoke(comic: Comic) = comicsRepository.createComic(comic)
 }
