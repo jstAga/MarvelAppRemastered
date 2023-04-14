@@ -17,7 +17,7 @@ abstract class BaseRepository {
 
     protected fun <T> makeNetworkRequest(
         gatherIfSucceed: ((T) -> Unit)? = null,
-        request: suspend () -> T
+        request: suspend () -> T,
     ) =
         flow<Either<String, T>> {
             request().also {
@@ -35,7 +35,7 @@ abstract class BaseRepository {
         enablePlaceholders: Boolean = true,
         initialLoadSize: Int = pageSize * 3,
         maxSize: Int = Int.MAX_VALUE,
-        jumpThreshold: Int = Int.MIN_VALUE
+        jumpThreshold: Int = Int.MIN_VALUE,
     ): Flow<PagingData<Value>> {
         return Pager(
             config = PagingConfig(
@@ -52,10 +52,10 @@ abstract class BaseRepository {
         ).flow
     }
 
-    protected fun <T> doRequest(response: suspend () -> Resource<T>): Flow<Resource<T>> = flow {
+    protected fun <T> doRequest(response: suspend () -> T): Flow<Resource<T>> = flow {
         emit(Resource.Loading())
         try {
-            emit(Resource.Success(response().data))
+            emit(Resource.Success(response()))
         } catch (ioException: IOException) {
             emit(Resource.Error(ioException.localizedMessage ?: "unknown exception"))
         }

@@ -23,3 +23,9 @@ fun Comic.toUI() = ComicUi(
     image = image,
     id = id
 )
+
+fun ComicUi.toDomain() = Comic(
+    title = title.toString(),
+    image = image.toString(),
+    id = id
+)

@@ -1,8 +1,9 @@
 plugins {
-    id (Plugins.AGP.application)
-    id ("kotlin-android")
-//    kotlin("android")
-//    id (Plugins.AGP.library)
+    id(Plugins.AGP.application)
+    id(Plugins.Kotlin.kapt)
+    id(Plugins.Kotlin.kotlin)
+    id(Plugins.DaggerHilt.android)
+//    id ("kotlin-android")
 }
 
 android {
@@ -11,8 +12,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.marvelappremastered"
-        minSdk  = AndroidConfig.minSdk
-        targetSdk =  AndroidConfig.targetSdk
+        minSdk = AndroidConfig.minSdk
+        targetSdk = AndroidConfig.targetSdk
         versionCode = 1
         versionName = "1.0"
 
@@ -23,7 +24,8 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -44,24 +46,31 @@ dependencies {
     implementation(project(":domain"))
 
     // UI
-    implementation (Deps.Ui.androidCore)
-    implementation (Deps.Ui.appcompat)
-    implementation (Deps.Ui.material)
-    implementation (Deps.Ui.constraint)
-    testImplementation (Deps.Ui.junit)
-    androidTestImplementation (Deps.Ui.extJunit)
-    androidTestImplementation (Deps.Ui.espresso)
+    implementation(Deps.Ui.androidCore)
+    implementation(Deps.Ui.appcompat)
+    implementation(Deps.Ui.material)
+    implementation(Deps.Ui.constraint)
+    testImplementation(Deps.Ui.junit)
+    androidTestImplementation(Deps.Ui.extJunit)
+    androidTestImplementation(Deps.Ui.espresso)
     implementation(Deps.Ui.fragment)
     implementation(Deps.Ui.viewPager2)
 
     // Coroutines
     implementation(Deps.Coroutines.android)
 
-    // Koin
-    implementation(Deps.Koin.koin)
-    implementation(Deps.Koin.viewModel)
-    implementation(Deps.Koin.fragment)
-    implementation(Deps.Koin.scope)
+    // Hilt
+    implementation(Deps.DaggerHilt.android)
+    kapt(Deps.DaggerHilt.compiler)
+
+    // Retrofit
+    implementation(Deps.Retrofit.retrofit)
+    implementation(Deps.Retrofit.converterGson)
+
+    // Room
+    implementation(Deps.Room.room)
+    implementation(Deps.Room.roomRuntime)
+    implementation(Deps.Room.compiler)
 
     // Navigation
     implementation(Deps.Navigation.ui)

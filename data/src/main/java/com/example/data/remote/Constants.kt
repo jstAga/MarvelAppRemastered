@@ -11,7 +11,7 @@ class Constants {
 
         private const val MARVEL_PRIVATE_KEY = "e96dba542132bc92b4436e34dd50455ffd3f4b4f"
         internal const val MARVEL_API_KEY = "3e794e5ed62fd1f9a317dde6718e63da"
-        internal const val BASE_URL_MARVEL = "https://gateway.marvel.com"
+         const val BASE_URL_MARVEL = "https://gateway.marvel.com"
 
         fun hash(): String{
             val input = "$timeStamp${MARVEL_PRIVATE_KEY}${MARVEL_API_KEY}"

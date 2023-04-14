@@ -19,3 +19,9 @@ data class ComicEntity(
         image = image
     )
 }
+
+fun Comic.toComicEntity() = ComicEntity(
+    id = id,
+    title = title,
+    image = image
+)
