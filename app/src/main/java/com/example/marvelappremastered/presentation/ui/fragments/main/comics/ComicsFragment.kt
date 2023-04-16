@@ -28,7 +28,7 @@ class ComicsFragment :
     override fun initSubscribers() {
         super.initSubscribers()
         viewModel.getComics().collectPaging { comicsAdapter.submitData(it) }
-//        viewModel.createComicState.collectUIState { Log.e("aga", "added: $it") }
+        viewModel.createComicState.collectUIState { Log.e("aga", "added: $it") }
     }
 
     private fun initAdapter() {
@@ -39,6 +39,6 @@ class ComicsFragment :
     }
 
     private fun onSaveClick(comicUi: ComicUi) {
-//        viewModel.createComic(comicUi)
+        viewModel.createComic(comicUi)
     }
 }

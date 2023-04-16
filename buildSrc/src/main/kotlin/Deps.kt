@@ -17,7 +17,7 @@ object Versions {
     const val paging = "3.1.1"
     const val retrofit = "2.9.0"
     const val room = "2.4.3"
-    const val daggerHilt = "2.44"
+    const val daggerHilt = "2.45"
 }
 
 object Deps {
