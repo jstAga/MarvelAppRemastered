@@ -3,7 +3,6 @@ plugins {
     id(Plugins.Kotlin.kapt)
     id(Plugins.Kotlin.kotlin)
     id(Plugins.DaggerHilt.android)
-//    id ("kotlin-android")
 }
 
 android {
@@ -69,8 +68,8 @@ dependencies {
 
     // Room
     implementation(Deps.Room.room)
-    annotationProcessor(Deps.Room.compiler)
-//    kapt(Deps.Room.compiler)
+    implementation(Deps.Room.roomRuntime)
+    kapt(Deps.Room.compiler)
 
     // Navigation
     implementation(Deps.Navigation.ui)
@@ -81,9 +80,4 @@ dependencies {
 
     // Coil
     implementation(Deps.Coil.coil)
-
-    // Lifecycle
-    val lifecycleVersion = "2.5.1"
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
 }

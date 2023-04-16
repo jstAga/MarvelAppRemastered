@@ -15,19 +15,19 @@ import javax.inject.Inject
 @HiltViewModel
 class ComicsViewModel @Inject constructor(
     private val getComicsUseCase: GetComicsUseCase,
-//    private val createComicUseCase: CreateComicUseCase,
+    private val createComicUseCase: CreateComicUseCase,
 //    private val deleteComicUseCase: DeleteComicUseCase,
 ) : BaseViewModel() {
 
-//    private val _createComicState = MutableStateFlow<UIState<Unit>>(UIState.Idle())
-//    val createComicState = _createComicState.asStateFlow()
+    private val _createComicState = MutableStateFlow<UIState<Unit>>(UIState.Idle())
+    val createComicState = _createComicState.asStateFlow()
 
 //    private val _deleteComicState = MutableStateFlow<UIState<Unit>>(UIState.Idle())
 //    val deleteComicState = _deleteComicState.asStateFlow()
 
     fun getComics() = getComicsUseCase().gatherPagingRequest { it.toUI() }
 
-//    fun createComic(comicUi: ComicUi) = createComicUseCase(comicUi.toDomain()).collectFlow(_createComicState)
+    fun createComic(comicUi: ComicUi) = createComicUseCase(comicUi.toDomain()).collectFlow(_createComicState)
 
 //    fun deleteComic(comic: Comic) = deleteComicUseCase(comic).collectFlow(_deleteComicState)
 }

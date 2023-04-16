@@ -40,9 +40,6 @@ dependencies {
     implementation(Deps.Retrofit.retrofit)
     implementation(Deps.Retrofit.converterGson)
 
-    // OkHttp
-    implementation(Deps.Okhttp.okhttp3)
-
     // Coroutines
     implementation(Deps.Coroutines.android)
 
@@ -51,8 +48,7 @@ dependencies {
 
     // Room
     implementation(Deps.Room.room)
-    annotationProcessor(Deps.Room.compiler)
-//    kapt(Deps.Room.compiler)
+    kapt(Deps.Room.compiler)
 
     // Inject
     implementation(Deps.Javax.inject)
