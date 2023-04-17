@@ -1,9 +1,8 @@
-package com.example.data.core.base
+package com.example.data.utils.base
 
 import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.data.core.DataMapper
 import retrofit2.HttpException
 import retrofit2.Response
 import java.io.IOException

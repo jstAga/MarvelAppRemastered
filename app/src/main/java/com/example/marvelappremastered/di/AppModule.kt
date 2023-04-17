@@ -2,9 +2,9 @@ package com.example.marvelappremastered.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.data.local.room.ComicsDao
-import com.example.data.local.room.ComicDataBase
-import com.example.data.remote.Constants
+import com.example.data.local.room.dao.ComicsDao
+import com.example.data.local.room.db.ComicDataBase
+import com.example.data.utils.Constants
 import com.example.data.remote.apiServices.MarvelApi
 import com.example.data.repository.ComicsRepositoryImpl
 import com.example.data.repository.RoomRepositoryImpl

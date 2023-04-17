@@ -1,4 +1,4 @@
-package com.example.data.core
+package com.example.data.utils.base
 
 interface DataMapper<T> {
     fun mapToDomain(): T

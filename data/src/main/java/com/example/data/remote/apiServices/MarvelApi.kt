@@ -1,8 +1,8 @@
 package com.example.data.remote.apiServices
 
-import com.example.data.core.base.BaseMarvel
-import com.example.data.core.base.BasePagingResponse
-import com.example.data.remote.Constants
+import com.example.data.utils.base.BaseMarvel
+import com.example.data.utils.base.BasePagingResponse
+import com.example.data.utils.Constants
 import com.example.data.remote.dtos.ComicDto
 import retrofit2.Response
 import retrofit2.http.GET

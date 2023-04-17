@@ -1,4 +1,4 @@
-package com.example.data.remote
+package com.example.data.utils
 
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -14,7 +14,7 @@ class Constants {
          const val BASE_URL_MARVEL = "https://gateway.marvel.com"
 
         fun hash(): String{
-            val input = "$timeStamp${MARVEL_PRIVATE_KEY}${MARVEL_API_KEY}"
+            val input = "$timeStamp$MARVEL_PRIVATE_KEY$MARVEL_API_KEY"
             val md = MessageDigest.getInstance("MD5")
             return BigInteger(1,md.digest(input.toByteArray())).toString(16).padStart(32,'0')
         }

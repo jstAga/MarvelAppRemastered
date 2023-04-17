@@ -1,6 +1,6 @@
 package com.example.data.remote.dtos
 
-import com.example.data.core.DataMapper
+import com.example.data.utils.base.DataMapper
 import com.example.domain.model.ComicModel
 import com.example.domain.model.ThumbnailModel
 import com.google.gson.annotations.Expose

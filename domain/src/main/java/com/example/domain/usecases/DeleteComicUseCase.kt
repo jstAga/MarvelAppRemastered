@@ -2,9 +2,10 @@ package com.example.domain.usecases
 
 import com.example.domain.model.Comic
 import com.example.domain.repository.ComicsRepository
+import com.example.domain.repository.RoomRepository
 import javax.inject.Inject
 
-class DeleteComicUseCase @Inject constructor(private val comicsRepository: ComicsRepository) {
+class DeleteComicUseCase @Inject constructor(private val repository: RoomRepository) {
 
-//    operator fun invoke(comic: Comic) = comicsRepository.deleteComic(comic)
+    operator fun invoke(comic: Comic) = repository.deleteComic(comic)
 }
