@@ -5,8 +5,7 @@ import com.example.domain.model.ComicModel
 import kotlinx.coroutines.flow.Flow
 
 
-interface ComicsRepository {
+interface ShopRepository {
 
     fun getComics() : Flow<PagingData<ComicModel>>
-
 }

@@ -6,9 +6,9 @@ import com.example.data.local.room.dao.ComicsDao
 import com.example.data.local.room.db.ComicDataBase
 import com.example.data.utils.Constants
 import com.example.data.remote.apiServices.MarvelApi
-import com.example.data.repository.ComicsRepositoryImpl
+import com.example.data.repository.ShopRepositoryImpl
 import com.example.data.repository.RoomRepositoryImpl
-import com.example.domain.repository.ComicsRepository
+import com.example.domain.repository.ShopRepository
 import com.example.domain.repository.RoomRepository
 import dagger.Module
 import dagger.Provides
@@ -34,7 +34,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideComicsRepository(marvelApi: MarvelApi) : ComicsRepository= ComicsRepositoryImpl(marvelApi)
+    fun provideComicsRepository(marvelApi: MarvelApi) : ShopRepository= ShopRepositoryImpl(marvelApi)
 
     @Singleton
     @Provides
