@@ -8,7 +8,7 @@ import com.example.marvelappremastered.R
 import com.example.marvelappremastered.databinding.FragmentComicsBinding
 import com.example.marvelappremastered.presentation.core.base.BaseFragment
 import com.example.marvelappremastered.presentation.model.ComicUi
-import com.example.marvelappremastered.presentation.ui.fragments.main.comics.adapter.ComicsPagingAdapter
+import com.example.marvelappremastered.presentation.ui.fragments.main.shop.adapter.LocalComicsPagingAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,17 +18,11 @@ class ComicsFragment :
     override val binding by viewBinding(FragmentComicsBinding::bind)
     override val viewModel: ComicsViewModel by viewModels()
 
-    private val comicsAdapter by lazy { ComicsPagingAdapter(this::onSaveClick) }
+    private val comicsAdapter by lazy { LocalComicsPagingAdapter(this::onClick) }
 
     override fun initialize() {
         super.initialize()
         initAdapter()
-    }
-
-    override fun initSubscribers() {
-        super.initSubscribers()
-        viewModel.getComics().collectPaging { comicsAdapter.submitData(it) }
-        viewModel.createComicState.collectUIState { Log.e("aga", "added: $it") }
     }
 
     private fun initAdapter() {
@@ -38,7 +32,16 @@ class ComicsFragment :
         }
     }
 
-    private fun onSaveClick(comicUi: ComicUi) {
-        viewModel.createComic(comicUi)
+    override fun initRequest() {
+        super.initRequest()
+        readComics()
+    }
+
+    private fun readComics() {
+        viewModel.readComics().collectPaging { comicsAdapter.submitData(it) }
+    }
+
+    private fun onClick(comic : ComicUi){
+        Log.e("aga", "onClick: ${comic.title}", )
     }
 }
