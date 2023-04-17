@@ -1,6 +1,6 @@
 package com.example.marvelappremastered.presentation.model
 
-import com.example.data.core.base.IBaseDiffModel
+import com.example.data.utils.base.IBaseDiffModel
 import com.example.domain.model.Comic
 import com.example.domain.model.ComicModel
 

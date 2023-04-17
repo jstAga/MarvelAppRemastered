@@ -2,7 +2,7 @@ package com.example.data.local.room.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.data.core.DataMapper
+import com.example.data.utils.base.DataMapper
 import com.example.domain.model.Comic
 
 

@@ -1,4 +1,4 @@
-package com.example.data.core.base
+package com.example.data.utils.base
 
 import androidx.recyclerview.widget.DiffUtil
 

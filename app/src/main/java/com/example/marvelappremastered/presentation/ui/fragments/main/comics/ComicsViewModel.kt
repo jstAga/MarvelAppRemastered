@@ -1,5 +1,6 @@
 package com.example.marvelappremastered.presentation.ui.fragments.main.comics
 
+import android.util.Log
 import com.example.domain.usecases.CreateComicUseCase
 import com.example.domain.usecases.GetComicsUseCase
 import com.example.marvelappremastered.presentation.model.toUI
@@ -27,7 +28,12 @@ class ComicsViewModel @Inject constructor(
 
     fun getComics() = getComicsUseCase().gatherPagingRequest { it.toUI() }
 
-    fun createComic(comicUi: ComicUi) = createComicUseCase(comicUi.toDomain()).collectFlow(_createComicState)
+    fun createComic(comicUi: ComicUi) =
+        try {
+            createComicUseCase(comicUi.toDomain()).collectFlow(_createComicState)
+        } catch (e: Exception) {
+            Log.e("aga", "onSaveClick: ${e.message}")
+        }
 
 //    fun deleteComic(comic: Comic) = deleteComicUseCase(comic).collectFlow(_deleteComicState)
 }
