@@ -1,7 +1,7 @@
 package com.example.data.repository
 
 import androidx.paging.PagingData
-import com.example.data.utils.base.BaseRepository
+import com.example.data.utils.base.paging.BaseRepository
 import com.example.data.remote.apiServices.MarvelApi
 import com.example.data.remote.pagingSources.ComicsMarvelPagingSource
 import com.example.domain.model.ComicModel

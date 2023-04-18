@@ -8,7 +8,7 @@ import com.example.marvelappremastered.R
 import com.example.marvelappremastered.databinding.FragmentComicsBinding
 import com.example.marvelappremastered.presentation.core.base.BaseFragment
 import com.example.marvelappremastered.presentation.model.ComicUi
-import com.example.marvelappremastered.presentation.ui.fragments.main.shop.adapter.LocalComicsPagingAdapter
+import com.example.marvelappremastered.presentation.ui.fragments.main.comics.adapter.ShopPagingAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,7 +18,7 @@ class ComicsFragment :
     override val binding by viewBinding(FragmentComicsBinding::bind)
     override val viewModel: ComicsViewModel by viewModels()
 
-    private val comicsAdapter by lazy { LocalComicsPagingAdapter(this::onClick) }
+    private val comicsAdapter by lazy { ShopPagingAdapter(this::onClick) }
 
     override fun initialize() {
         super.initialize()

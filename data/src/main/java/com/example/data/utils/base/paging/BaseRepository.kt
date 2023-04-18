@@ -1,8 +1,9 @@
-package com.example.data.utils.base
+package com.example.data.utils.base.paging
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
+import com.example.data.utils.base.DataMapper
 import com.example.domain.result.Either
 import com.example.domain.result.Resource
 import kotlinx.coroutines.Dispatchers

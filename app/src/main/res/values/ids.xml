@@ -23,4 +23,15 @@
     <item type="id" name="btnGoogle" />
     <item type="id" name="btnFacebook" />
     <item type="id" name="btnRegistration" />
+
+    <item type="id" name="ivSimCard" />
+    <item type="id" name="tvCard" />
+    <item type="id" name="tvTextValid" />
+    <item type="id" name="tvValid" />
+    <item type="id" name="tvName" />
+    <item type="id" name="ivCardLogo" />
+    <item type="id" name="etCard" />
+    <item type="id" name="etValidThru" />
+    <item type="id" name="etCv" />
+    <item type="id" name="btnConfirm" />
 </resources>

@@ -1,4 +1,4 @@
-package com.example.data.utils.base
+package com.example.data.utils.base.paging
 
 import com.google.gson.annotations.SerializedName
 

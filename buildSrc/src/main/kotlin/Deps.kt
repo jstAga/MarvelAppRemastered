@@ -87,6 +87,10 @@ object Deps {
         const val android = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
         const val compiler = "com.google.dagger:hilt-compiler:${Versions.daggerHilt}"
     }
+
+    object MaskedEditText{
+        const val formatter = "io.github.vicmikhailau:MaskedEditText:4.0.7"
+    }
 }
 
 object Plugins {
