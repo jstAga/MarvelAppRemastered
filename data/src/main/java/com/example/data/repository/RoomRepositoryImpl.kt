@@ -1,7 +1,7 @@
 package com.example.data.repository
 
 import androidx.paging.*
-import com.example.data.utils.base.BaseRepository
+import com.example.data.utils.base.paging.BaseRepository
 import com.example.data.local.room.dao.ComicsDao
 import com.example.data.local.room.entities.toComicEntity
 import com.example.data.local.room.pagingSources.ComicsPagingSource

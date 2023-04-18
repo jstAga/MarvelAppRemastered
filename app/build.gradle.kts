@@ -80,4 +80,7 @@ dependencies {
 
     // Coil
     implementation(Deps.Coil.coil)
+
+    // Text formatter
+    implementation (Deps.MaskedEditText.formatter)
 }

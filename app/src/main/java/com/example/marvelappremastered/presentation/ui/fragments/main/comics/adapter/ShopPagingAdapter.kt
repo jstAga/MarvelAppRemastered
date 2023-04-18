@@ -6,11 +6,12 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.data.utils.base.BaseDiffUtilItemCallback
-import com.example.marvelappremastered.databinding.ItemComicBinding
+import com.example.marvelappremastered.databinding.ItemShopBinding
 import com.example.marvelappremastered.presentation.model.ComicUi
 
-class ComicsPagingAdapter(private val onComicClick: (ComicUi) -> Unit) :
-    PagingDataAdapter<ComicUi, ComicsPagingAdapter.ViewHolder>(
+
+class ShopPagingAdapter(private val onComicClick: (ComicUi) -> Unit) :
+    PagingDataAdapter<ComicUi, ShopPagingAdapter.ViewHolder>(
         BaseDiffUtilItemCallback()
     ) {
 
@@ -20,11 +21,11 @@ class ComicsPagingAdapter(private val onComicClick: (ComicUi) -> Unit) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            ItemComicBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemShopBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
 
-    inner class ViewHolder(private val binding: ItemComicBinding) :
+    inner class ViewHolder(private val binding: ItemShopBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(model: ComicUi) {

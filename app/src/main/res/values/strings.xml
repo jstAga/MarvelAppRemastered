@@ -20,4 +20,19 @@
     <string name="sign_in_with_facebook">sign in with facebook</string>
     <string name="registration">Registration</string>
     <string name="email">Email</string>
+
+    <string name="credit_card">Credit Card</string>
+    <string name="valid_thru">00/00</string>
+    <string name="valid_n_thru">valid \n thru</string>
+    <string name="cv">000</string>
+    <string name="confirm">confirm</string>
+    <string name="card_name">robert w. cardholder</string>
+    <string name="card_logo">card logo</string>
+    <string name="image_sim_card">image sim card</string>
+
+    <string name="error_card_length">the length of the card must be 16</string>
+    <string name="error_cv_length">the length of the cv must be 3</string>
+    <string name="error_month">month can\'t be more than 12</string>
+    <string name="error_valid">incorrect date</string>
+    <string name="error_card">incorrect card</string>
 </resources>
