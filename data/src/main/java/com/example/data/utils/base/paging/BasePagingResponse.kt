@@ -13,3 +13,10 @@ open class BaseMarvel<T>(
     @SerializedName("data")
     val data : T
 )
+
+open class BaseNews<T>(
+    @SerializedName("next")
+    val next: Int?,
+    @SerializedName("articles")
+    val results: MutableList<T>
+)

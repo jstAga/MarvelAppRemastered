@@ -35,4 +35,5 @@
     <string name="error_month">month can\'t be more than 12</string>
     <string name="error_valid">incorrect date</string>
     <string name="error_card">incorrect card</string>
+    <string name="latest_news">Latest news</string>
 </resources>

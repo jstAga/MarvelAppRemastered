@@ -34,4 +34,8 @@
     <item type="id" name="etValidThru" />
     <item type="id" name="etCv" />
     <item type="id" name="btnConfirm" />
+
+    <item type="id" name="rvNews" />
+    <item type="id" name="tvDesc" />
+    <item type="id" name="tvPublished" />
 </resources>

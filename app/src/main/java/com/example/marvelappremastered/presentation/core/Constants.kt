@@ -3,6 +3,7 @@ package com.example.marvelappremastered.presentation.core
 class Constants {
     companion object {
         internal const val BASE_URL_MARVEL = "https://gateway.marvel.com"
+        internal const val BASE_URL_NEWS = "https://newsapi.org"
 
         internal const val MARVEL_APP_SHARED_PREFERENCES = "marvel.app.shared.preferences"
 
