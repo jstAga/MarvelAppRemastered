@@ -5,14 +5,18 @@ import android.content.SharedPreferences
 import androidx.room.Room
 import com.example.data.local.room.dao.ComicsDao
 import com.example.data.local.room.db.ComicDataBase
+import com.example.data.remote.apiServices.ImdbApi
 import com.example.data.remote.apiServices.MarvelApi
 import com.example.data.remote.apiServices.NewsApi
+import com.example.data.repository.HomeRepositoryImpl
 import com.example.data.repository.NewsRepositoryImpl
 import com.example.data.repository.ShopRepositoryImpl
 import com.example.data.repository.RoomRepositoryImpl
+import com.example.domain.repository.HomeRepository
 import com.example.domain.repository.NewsRepository
 import com.example.domain.repository.ShopRepository
 import com.example.domain.repository.RoomRepository
+import com.example.marvelappremastered.presentation.core.Constants.Companion.BASE_URL_IMDB
 import com.example.marvelappremastered.presentation.core.Constants.Companion.BASE_URL_MARVEL
 import com.example.marvelappremastered.presentation.core.Constants.Companion.BASE_URL_NEWS
 import com.example.marvelappremastered.presentation.core.Constants.Companion.MARVEL_APP_SHARED_PREFERENCES
@@ -56,6 +60,10 @@ object AppModule {
 
     @Singleton
     @Provides
+    fun provideHomeRepository(imdbApi: ImdbApi): HomeRepository = HomeRepositoryImpl(imdbApi)
+
+    @Singleton
+    @Provides
     fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
             .protocols(listOf(Protocol.HTTP_2, Protocol.HTTP_1_1))
@@ -79,6 +87,16 @@ object AppModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(NewsApi::class.java)
+    }
+
+    @Provides
+    fun provideImdbApi(client: OkHttpClient): ImdbApi {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL_IMDB)
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ImdbApi::class.java)
     }
 
     @Singleton
