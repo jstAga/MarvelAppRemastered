@@ -8,8 +8,8 @@ import retrofit2.Response
 import java.io.IOException
 
 
-abstract class BaseMarvelPagingSource<ValueDto : DataMapper<Value>, Value : Any>(
-    private val request: suspend (position: Int) -> Response<BaseMarvel<BasePagingResponse<ValueDto>>>,
+abstract class BaseNewsPagingSource<ValueDto : DataMapper<Value>, Value : Any>(
+    private val request: suspend (position: Int) -> Response<BaseNews<ValueDto>>,
 ) : PagingSource<Int, Value>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Value> {
@@ -17,7 +17,7 @@ abstract class BaseMarvelPagingSource<ValueDto : DataMapper<Value>, Value : Any>
 
         return try {
             val response = request(position)
-            val data = response.body()?.data?.results ?: emptyList()
+            val data = response.body()?.results ?: emptyList()
             val responseData = mutableListOf<Value>()
             responseData.addAll(data.map { it.mapToDomain() })
 
