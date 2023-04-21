@@ -23,21 +23,28 @@ class ShopFragment :
     private val comicsAdapter by lazy { ComicsPagingAdapter(this::onSaveClick, this::onBuyClick) }
 
     override fun initialize() {
-        super.initialize()
         initAdapter()
     }
 
     override fun initSubscribers() {
-        super.initSubscribers()
-        viewModel.getComics().collectPaging { comicsAdapter.submitData(it) }
-        viewModel.createComicState.collectUIState { Log.e("aga", "added: $it") }
+        getComics()
+        createComics()
     }
+
 
     private fun initAdapter() {
         with(binding.rvShop) {
             adapter = comicsAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
+    }
+
+    private fun createComics() {
+        viewModel.createComicState.collectUIState { Log.e("aga", "added: $it") }
+    }
+
+    private fun getComics() {
+        viewModel.getComics().collectPaging { comicsAdapter.submitData(it) }
     }
 
     private fun onSaveClick(comicUi: ComicUi) {

@@ -23,14 +23,19 @@ class NewsFragment :
     }
 
     override fun initRequest() {
-        viewModel.getNews().collectPaging { newsAdapter.submitData(it) }
+        getNews()
     }
+
 
     private fun initAdapter() {
         with(binding.rvNews){
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
+    }
+
+    private fun getNews() {
+        viewModel.getNews().collectPaging { newsAdapter.submitData(it) }
     }
 
     private fun onNewsClick(url : String){}
