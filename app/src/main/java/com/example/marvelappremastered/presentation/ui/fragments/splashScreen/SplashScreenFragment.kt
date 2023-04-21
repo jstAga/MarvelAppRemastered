@@ -22,7 +22,6 @@ class SplashScreenFragment :
     override val viewModel : SplashScreenViewModel by viewModels()
 
     override fun initialize() {
-        super.initialize()
         binding.ivLogo.load(R.drawable.ic_marvel_logo) {
             crossfade(750)
             build()

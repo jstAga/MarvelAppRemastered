@@ -21,7 +21,6 @@ class ComicsFragment :
     private val comicsAdapter by lazy { ShopPagingAdapter(this::onClick) }
 
     override fun initialize() {
-        super.initialize()
         initAdapter()
     }
 
@@ -33,7 +32,6 @@ class ComicsFragment :
     }
 
     override fun initRequest() {
-        super.initRequest()
         readComics()
     }
 

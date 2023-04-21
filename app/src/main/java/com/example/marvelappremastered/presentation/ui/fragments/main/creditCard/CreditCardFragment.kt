@@ -32,12 +32,10 @@ class CreditCardFragment :
     lateinit var prefs: Prefs
 
     override fun initialize() {
-        super.initialize()
         initFormatters()
     }
 
     override fun initListeners() {
-        super.initListeners()
         setCard()
         setValid()
         validate()

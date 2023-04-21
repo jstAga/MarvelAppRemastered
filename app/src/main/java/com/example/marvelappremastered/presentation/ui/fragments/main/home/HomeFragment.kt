@@ -26,19 +26,27 @@ class HomeFragment :
     }
 
     override fun initRequest() {
-        viewModel.getFilms().collectPaging { filmsAdapter.submitData(it) }
+        getFilms()
     }
 
     override fun initListeners() {
-        binding.btnNews.setOnClickListener {
-            findNavController().navigateSafely(R.id.action_homeFragment_to_newsFragment)
-        }
+        navigateToNews()
     }
 
     private fun initAdapter() {
         with(binding.rvFilms){
             adapter = filmsAdapter
             layoutManager = LinearLayoutManager(requireContext())
+        }
+    }
+
+    private fun getFilms() {
+        viewModel.getFilms().collectPaging { filmsAdapter.submitData(it) }
+    }
+
+    private fun navigateToNews() {
+        binding.btnNews.setOnClickListener {
+            findNavController().navigateSafely(R.id.action_homeFragment_to_newsFragment)
         }
     }
 
