@@ -1,11 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    android:layout_height="match_parent"
+    android:background="@color/main_dark_gray"
+    android:orientation="vertical">
 
-</FrameLayout>
+    <TextView
+        style="@style/Title.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credit_card" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="@dimen/margin28"
+        android:layout_marginTop="@dimen/margin20"
+        android:background="@drawable/img_credit_card">
+
+        <ImageView
+            android:id="@id/ivSimCard"
+            android:layout_width="@dimen/margin60"
+            android:layout_height="@dimen/margin50"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginBottom="@dimen/margin60"
+            android:contentDescription="@string/image_sim_card"
+            android:src="@drawable/image_sim_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/tvCard"
+            android:gravity="start"
+            style="@style/Card.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_title_size"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/ivSimCard" />
+
+        <TextView
+            android:id="@id/tvTextValid"
+            style="@style/Card.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin8"
+            android:layout_marginEnd="@dimen/margin20"
+            android:text="@string/valid_n_thru"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCard"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@id/tvValid"
+            style="@style/Card.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin4"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintBottom_toBottomOf="@id/tvTextValid"
+            app:layout_constraintStart_toEndOf="@id/tvTextValid"
+            app:layout_constraintTop_toTopOf="@id/tvTextValid" />
+
+        <TextView
+            android:id="@id/tvName"
+            style="@style/Card.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin4"
+            android:text="@string/card_name"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toStartOf="@id/ivSimCard"
+            app:layout_constraintTop_toBottomOf="@id/tvTextValid" />
+
+        <ImageView
+            android:id="@id/ivCardLogo"
+            android:layout_width="@dimen/margin28"
+            android:layout_height="@dimen/margin60"
+            android:contentDescription="@string/card_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <EditText
+        android:id="@id/etCard"
+        style="@style/Auth.Edit.Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_credit_card"
+        android:inputType="number"
+        android:maxLength="19"
+        tools:ignore="Autofill,LabelFor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@id/etValidThru"
+            style="@style/Auth.Edit.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_valid_thru"
+            android:hint="@string/valid_thru"
+            android:inputType="number"
+            android:maxLength="5"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@id/etCv"
+            style="@style/Auth.Edit.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_cv"
+            android:hint="@string/cv"
+            android:inputType="number"
+            android:maxLength="3"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/btnConfirm"
+        style="@style/Base.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin20"
+        android:text="@string/confirm" />
+</LinearLayout>

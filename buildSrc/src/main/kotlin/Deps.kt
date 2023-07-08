@@ -16,6 +16,8 @@ object Versions {
     const val koin_version = "2.2.3"
     const val paging = "3.1.1"
     const val retrofit = "2.9.0"
+    const val room = "2.4.3"
+    const val daggerHilt = "2.45"
 }
 
 object Deps {
@@ -50,12 +52,12 @@ object Deps {
         const val inject = "javax.inject:javax.inject:1"
     }
 
-    object Koin{
-        const val koin =  "io.insert-koin:koin-android:${Versions.koin_version}"
-        const val scope =  "io.insert-koin:koin-androidx-scope:${Versions.koin_version}"
-        const val viewModel =  "io.insert-koin:koin-androidx-viewmodel:${Versions.koin_version}"
-        const val fragment =  "io.insert-koin:koin-androidx-fragment:${Versions.koin_version}"
-    }
+//    object Koin{
+//        const val koin =  "io.insert-koin:koin-android:${Versions.koin_version}"
+//        const val scope =  "io.insert-koin:koin-androidx-scope:${Versions.koin_version}"
+//        const val viewModel =  "io.insert-koin:koin-androidx-viewmodel:${Versions.koin_version}"
+//        const val fragment =  "io.insert-koin:koin-androidx-fragment:${Versions.koin_version}"
+//    }
 
     object Coil{
         const val coil = "io.coil-kt:coil:2.2.2"
@@ -74,6 +76,21 @@ object Deps {
         const val common = "androidx.paging:paging-common:${Versions.paging}"
         const val paging = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
     }
+
+    object Room {
+        const val room = "androidx.room:room-ktx:${Versions.room}"
+        const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
+        const val compiler = "androidx.room:room-compiler:${Versions.room}"
+    }
+
+    object DaggerHilt {
+        const val android = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
+        const val compiler = "com.google.dagger:hilt-compiler:${Versions.daggerHilt}"
+    }
+
+    object MaskedEditText{
+        const val formatter = "io.github.vicmikhailau:MaskedEditText:4.0.7"
+    }
 }
 
 object Plugins {
@@ -88,5 +105,9 @@ object Plugins {
         const val kotlin_jvm = "org.jetbrains.kotlin.jvm"
         const val kotlin = "org.jetbrains.kotlin.android"
         const val kapt = "kotlin-kapt"
+    }
+
+    object DaggerHilt {
+        const val android = "com.google.dagger.hilt.android"
     }
 }

@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/authFragment"
-        android:name="com.example.marvelappremastered.ui.fragments.auth.AuthFragment"
+        android:name="com.example.marvelappremastered.presentation.ui.fragments.sign.auth.AuthFragment"
         android:label="AuthFragment"
         tools:layout="@layout/fragment_auth"/>
 
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.example.marvelappremastered.ui.fragments.onBoarding.OnBoardingFragment"
+        android:name="com.example.marvelappremastered.presentation.ui.fragments.main.onBoarding.OnBoardingFragment"
         android:label="OnBoardingFragment"
         tools:layout="@layout/fragment_on_boarding">
 
@@ -21,4 +21,9 @@
             android:id="@+id/action_onBoardingFragment_to_authFragment2"
             app:destination="@id/authFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/regFragment"
+        android:name="com.example.marvelappremastered.presentation.ui.fragments.sign.reg.RegFragment"
+        android:label="fragment_reg"
+        tools:layout="@layout/fragment_reg" />
 </navigation>

@@ -1,6 +1,7 @@
 plugins {
     id(Plugins.AGP.library)
     id(Plugins.Kotlin.kotlin)
+    id(Plugins.Kotlin.kapt)
 }
 
 android {
@@ -39,15 +40,16 @@ dependencies {
     implementation(Deps.Retrofit.retrofit)
     implementation(Deps.Retrofit.converterGson)
 
-    // OkHttp
-    implementation(Deps.Okhttp.okhttp3)
-
     // Coroutines
     implementation(Deps.Coroutines.android)
 
-    // Koin
-    implementation(Deps.Koin.koin)
-
-    //Paging
+    // Paging
     api(Deps.Paging3.paging)
+
+    // Room
+    implementation(Deps.Room.room)
+    kapt(Deps.Room.compiler)
+
+    // Inject
+    implementation(Deps.Javax.inject)
 }

@@ -11,4 +11,7 @@
     <color name="main_dark_gray">#10100E</color>
     <color name="dark_gray">#0A0A0A</color>
     <color name="light_gray">#99FFFFFF</color>
+    <color name="blue_facebook">#3B5A98</color>
+    <color name="gray">#99FFFFFF</color>
+    <color name="silver">#CECECE</color>
 </resources>

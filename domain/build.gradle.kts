@@ -1,5 +1,6 @@
 plugins {
-    id (Plugins.Kotlin.kotlin_jvm)
+    id(Plugins.AGP.java)
+    id(Plugins.Kotlin.kotlin_jvm)
 }
 
 java {
@@ -7,11 +8,14 @@ java {
     targetCompatibility = JavaVersion.VERSION_11
 }
 
-dependencies{
+dependencies {
 
-    //coroutines
+    // Coroutines
     api(Deps.Coroutines.core)
 
-    //paging
+    // Paging
     implementation(Deps.Paging3.common)
+
+    // Inject
+    implementation(Deps.Javax.inject)
 }

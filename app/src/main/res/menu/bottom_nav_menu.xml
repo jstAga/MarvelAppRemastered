@@ -7,12 +7,13 @@
         android:title="@string/title_home" />
 
     <item
+        android:id="@+id/comicsFragment"
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/comics" />
+
+    <item
         android:id="@+id/shopFragment"
         android:icon="@drawable/ic_not_favorite"
         android:title="@string/shop" />
 
-    <item
-        android:id="@+id/comicsFragment"
-        android:icon="@drawable/ic_favorite"
-        android:title="@string/comics" />
 </menu>

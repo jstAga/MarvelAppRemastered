@@ -3,7 +3,7 @@
     <item type="id" name="ivLogo" />
 
     <item type="id" name="rvPoster" />
-    <item type="id" name="rvFeed" />
+    <item type="id" name="rvFilms" />
     <item type="id" name="btnNews" />
 
     <item type="id" name="rvComics" />
@@ -15,4 +15,27 @@
     <item type="id" name="tvPrice" />
     <item type="id" name="tvCount" />
     <item type="id" name="btnBuy" />
+
+    <item type="id" name="etEmail" />
+    <item type="id" name="etPassword" />
+    <item type="id" name="tvForgotPassword" />
+    <item type="id" name="btnLogin" />
+    <item type="id" name="btnGoogle" />
+    <item type="id" name="btnFacebook" />
+    <item type="id" name="btnRegistration" />
+
+    <item type="id" name="ivSimCard" />
+    <item type="id" name="tvCard" />
+    <item type="id" name="tvTextValid" />
+    <item type="id" name="tvValid" />
+    <item type="id" name="tvName" />
+    <item type="id" name="ivCardLogo" />
+    <item type="id" name="etCard" />
+    <item type="id" name="etValidThru" />
+    <item type="id" name="etCv" />
+    <item type="id" name="btnConfirm" />
+
+    <item type="id" name="rvNews" />
+    <item type="id" name="tvDesc" />
+    <item type="id" name="tvPublished" />
 </resources>
